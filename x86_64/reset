@@ -1,0 +1,4 @@
+#!/bin/sh
+rm APKINDEX.tar.gz
+apk index -vU -o APKINDEX.tar.gz *.apk --allow-untrust
+abuild-sign -k antkss.rsa APKINDEX.tar.gz
